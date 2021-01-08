@@ -1,12 +1,19 @@
-let a = 23;
-let b = 34;
-let x = 0;
+const numberOfFilms = prompt("Сколько фильмов вы уже посмтрели?", "");
 
-console.log(a+b);
+const personalMovieDB = {
+            count: numberOfFilms,
+            movies: {},
+            actors: {},
+            genres: [],
+            privat: false
+};
 
+const   a = prompt("Один из последних просмотренных фильмов?", ""),
+        b = prompt("На сколько оцените его?", ""),
+        c = prompt("Один из последних просмотренных фильмов?", ""),
+        d = prompt("На сколько оцените его?", "");
 
-if (a==b) {
-    console.log('Равны')
-} else {
-    console.log('Не равны')
-}
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB);
