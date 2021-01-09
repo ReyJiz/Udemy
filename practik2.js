@@ -7,19 +7,34 @@ const personalMovieDB = {
             genres: [],
             privat: false
 };
+let i=0;
 
-for (let i = 0; i < 2; i++) {
+while (i < 3) {
     let FilmName = prompt("Название фильма, которые вы посмотрели?", "");
     let RateFilm = +prompt("На сколько оцените его?", "");
 
-        if (FilmName != null && RateFilm != null && FilmName != '' && RateFilm != '' && FilmName.length < 50) {
-            personalMovieDB.movies[FilmName] = RateFilm;
-            console.log('Done!');
-        } else {
-            console.log('Error');
-            i--;
-        }
+    if (FilmName != null && RateFilm != null && FilmName != '' && RateFilm != '' && FilmName.length < 50) {
+        personalMovieDB.movies[FilmName] = RateFilm;
+        console.log("Done");
+    } else {
+        console.log("Error")
+        i--
+    }
+    i++;
 }
+
+// for (let i = 0; i < 2; i++) {
+//     let FilmName = prompt("Название фильма, которые вы посмотрели?", "");
+//     let RateFilm = +prompt("На сколько оцените его?", "");
+//
+//         if (FilmName != null && RateFilm != null && FilmName != '' && RateFilm != '' && FilmName.length < 50) {
+//             personalMovieDB.movies[FilmName] = RateFilm;
+//             console.log('Done!');
+//         } else {
+//             console.log('Error');
+//             i--;
+//         }
+// }
 
 if (personalMovieDB.count < 10) {
     console.log("Просмотрено довольно мало фильмов");
