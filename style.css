@@ -1,3 +1,13 @@
-/*
-Test
-*/
+.grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.item {
+    margin: 5px;
+    background-color: #9A6AD6;
+    border: 2px solid #340570;
+    height: 250px;
+    width: auto;
+}
