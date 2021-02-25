@@ -85,7 +85,7 @@ personalMovieDB.writeYourGenres();
 
    
 personalMovieDB.genres.forEach((i, item) => {
-    console.log(`Любимый жанр ${item+1} - это ${i}`);
+    console.log(`Любимый жанр № ${item+1} - это ${i}`);
 });
 
 
