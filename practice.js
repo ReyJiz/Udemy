@@ -19,7 +19,7 @@ const personalMovieDB = {
             for (let i=1; i <= 4; i++){
                 let GenresName = prompt("Ваш любимый жанр под номером "+ i +"?", "");
         
-                if (GenresName != '' || GenresName != null) {
+                if (GenresName != '' && GenresName != null) {
                     personalMovieDB.genres[i-1] = GenresName;
                     console.log('Done genres');
                 } else{
@@ -60,7 +60,7 @@ const personalMovieDB = {
             if (personalMovieDB.privat === false){
                 console.log(personalMovieDB);
             } else {
-                console.log('Это приватная информация!');
+                console.log('Это приватная информация!');   
             }
         },
 
@@ -85,7 +85,7 @@ personalMovieDB.writeYourGenres();
 
    
 personalMovieDB.genres.forEach((i, item) => {
-    console.log(`Любимый жанр ${i+1} - это ${item}`);
+    console.log(`Любимый жанр ${item+1} - это ${i}`);
 });
 
 
